@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Cancer Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 600px; margin: auto; }
+        label { display: block; margin-top: 10px; }
+        input { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        .prediction { margin-top: 20px; font-weight: bold; color: red; }
+    </style>
+</head>
+<body>
+    <h1>Lung Cancer Prediction</h1>
+    <form method="POST">
+        <label for="gender">Gender (0 for Male, 1 for Female):</label>
+        <input type="number" id="gender" name="gender" min="0" max="1" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="smoking">Smoking (1 for Yes, 2 for No):</label>
+        <input type="number" id="smoking" name="smoking" min="1" max="2" required>
+
+        <label for="yellow_fingers">Yellow Fingers (1 for Yes, 2 for No):</label>
+        <input type="number" id="yellow_fingers" name="yellow_fingers" min="1" max="2" required>
+
+        <label for="anxiety">Anxiety (1 for Yes, 2 for No):</label>
+        <input type="number" id="anxiety" name="anxiety" min="1" max="2" required>
+
+        <label for="peer_pressure">Peer Pressure (1 for Yes, 2 for No):</label>
+        <input type="number" id="peer_pressure" name="peer_pressure" min="1" max="2" required>
+
+        <label for="chronic_disease">Chronic Disease (1 for Yes, 2 for No):</label>
+        <input type="number" id="chronic_disease" name="chronic_disease" min="1" max="2" required>
+
+        <label for="fatigue">Fatigue (1 for Yes, 2 for No):</label>
+        <input type="number" id="fatigue" name="fatigue" min="1" max="2" required>
+
+        <label for="allergy">Allergy (1 for Yes, 2 for No):</label>
+        <input type="number" id="allergy" name="allergy" min="1" max="2" required>
+
+        <label for="wheezing">Wheezing (1 for Yes, 2 for No):</label>
+        <input type="number" id="wheezing" name="wheezing" min="1" max="2" required>
+
+        <label for="alcohol_consuming">Alcohol Consuming (1 for Yes, 2 for No):</label>
+        <input type="number" id="alcohol_consuming" name="alcohol_consuming" min="1" max="2" required>
+
+        <label for="coughing">Coughing (1 for Yes, 2 for No):</label>
+        <input type="number" id="coughing" name="coughing" min="1" max="2" required>
+
+        <label for="shortness_of_breath">Shortness of Breath (1 for Yes, 2 for No):</label>
+        <input type="number" id="shortness_of_breath" name="shortness_of_breath" min="1" max="2" required>
+
+        <label for="swallowing_difficulty">Swallowing Difficulty (1 for Yes, 2 for No):</label>
+        <input type="number" id="swallowing_difficulty" name="swallowing_difficulty" min="1" max="2" required>
+
+        <label for="chest_pain">Chest Pain (1 for Yes, 2 for No):</label>
+        <input type="number" id="chest_pain" name="chest_pain" min="1" max="2" required>
+
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <div class="prediction">{{ prediction }}</div>
+    {% endif %}
+</body>
+</html>
