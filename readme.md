@@ -1,15 +1,7 @@
 <b><h1>Lung Cancer Prediction using Machine Learning<h1><b>
 
 <h7>This project predicts whether a person is likely to have lung cancer based on health and lifestyle indicators such as age, smoking habits, and respiratory symptoms.
-It uses a Random Forest Classifier trained on the Survey Lung Cancer Dataset and provides a simple Flask web interface for real-time predictions.<h7>
-
-<b>Project Structure <b>
-├── app.py                     
-├── lung_cancer_classifier.py  
-├── lung_cancer_model.pkl     
-├── survey lung cancer.csv     
-├── templates/
-│   └── index.html             
+It uses a Random Forest Classifier trained on the Survey Lung Cancer Dataset and provides a simple Flask web interface for real-time predictions.<h7>          
 
 <b><h2>Model Training (lung_cancer_classifier.py)<h2><b>
 
@@ -81,5 +73,6 @@ http://127.0.0.1:5000/
 <h3>Use the Application<h3>
 
 Fill out the form with patient details and submit to get the prediction.
+
 
 
